@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0F19;
+  --color-foreground: #EAEAEA;
+  --color-primary: #7B61FF;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #00D4FF;
+  --color-secondary-foreground: #0B0F19;
+  --color-card: #131A2A;
+  --color-card-foreground: #EAEAEA;
+  --color-border: #2A3143;
+  --color-muted: #8E9BB0;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.glass-panel {
+  background: rgba(19, 26, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(123, 97, 255, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7B61FF, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(123, 97, 255, 0.5);
+}
+
+.hover-glow-secondary:hover {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
