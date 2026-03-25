@@ -41,19 +41,19 @@ export default function Workshops() {
   };
 
   return (
-    <section id="workshops" className="py-24 relative overflow-hidden bg-background">
+    <section id="workshops" className="py-24 relative overflow-hidden bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Hands-on Learning</h2>
-          <h3 className="text-4xl md:text-5xl font-extrabold mb-6">
-            Interactive <span className="text-gradient">Workshops</span>
+          <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+            Interactive <span className="text-primary">Workshops</span>
           </h3>
-          <p className="text-lg text-muted max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
             Build, code, and fly. Our workshops are designed to spark curiosity and build real-world engineering skills.
           </p>
 
           {/* Tabs */}
-          <div className="inline-flex glass-panel p-1 rounded-full border-border/50 relative">
+          <div className="inline-flex bg-gray-50 p-1 rounded-full border border-gray-200 relative">
             <div
               className={`absolute inset-y-1 w-1/2 bg-primary rounded-full transition-all duration-300 ease-out ${
                 activeTab === 'kids' ? 'left-1' : 'left-[calc(50%-4px)]'
@@ -62,7 +62,7 @@ export default function Workshops() {
             <button
               onClick={() => setActiveTab('kids')}
               className={`relative z-10 px-8 py-3 rounded-full font-bold text-sm transition-colors ${
-                activeTab === 'kids' ? 'text-white' : 'text-muted hover:text-foreground'
+                activeTab === 'kids' ? 'text-white' : 'text-gray-500 hover:text-black'
               }`}
             >
               For Kids & Teens
@@ -70,7 +70,7 @@ export default function Workshops() {
             <button
               onClick={() => setActiveTab('engineering')}
               className={`relative z-10 px-8 py-3 rounded-full font-bold text-sm transition-colors ${
-                activeTab === 'engineering' ? 'text-white' : 'text-muted hover:text-foreground'
+                activeTab === 'engineering' ? 'text-white' : 'text-gray-500 hover:text-black'
               }`}
             >
               For Engineering Students
@@ -92,26 +92,26 @@ export default function Workshops() {
               {workshops[activeTab].map((workshop, index) => (
                 <div
                   key={index}
-                  className="glass-panel p-8 rounded-3xl border-border/50 hover:border-secondary/50 transition-all duration-300 group hover:-translate-y-1"
+                  className="bg-gray-50 p-8 rounded-3xl border border-gray-200 hover:border-primary/30 shadow-sm hover:shadow-md transition-all duration-300 group hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-                    <workshop.icon className="w-8 h-8 text-secondary" />
+                  <div className="w-16 h-16 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors border border-red-100">
+                    <workshop.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h4 className="text-2xl font-bold mb-3">{workshop.title}</h4>
-                  <p className="text-muted mb-6 leading-relaxed">{workshop.description}</p>
+                  <h4 className="text-2xl font-bold mb-3 text-black">{workshop.title}</h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{workshop.description}</p>
                   
                   <div className="flex items-center gap-4 mb-8">
-                    <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary bg-red-50 border border-red-100 px-3 py-1 rounded-full">
                       {'age' in workshop ? workshop.age : workshop.level}
                     </span>
-                    <span className="text-xs font-bold uppercase tracking-wider text-foreground/70 bg-white/5 border border-border/50 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gray-600 bg-white border border-gray-200 px-3 py-1 rounded-full">
                       {workshop.duration}
                     </span>
                   </div>
 
                   <a
                     href="#booking"
-                    className="inline-block w-full text-center py-3 rounded-xl bg-white/5 hover:bg-secondary hover:text-secondary-foreground font-bold transition-all border border-border/50 hover:border-transparent"
+                    className="inline-block w-full text-center py-3 rounded-xl bg-white hover:bg-primary hover:text-white text-black font-bold transition-all border border-gray-200 hover:border-transparent"
                   >
                     Register Now
                   </a>

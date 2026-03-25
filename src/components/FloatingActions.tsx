@@ -8,10 +8,10 @@ export default function FloatingActions() {
         href="#booking"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_0_20px_rgba(123,97,255,0.5)] hover:bg-primary/90 transition-colors group relative"
+        className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_0_20px_rgba(229,9,20,0.4)] hover:bg-primary/90 transition-colors group relative"
       >
         <CalendarCheck className="w-6 h-6" />
-        <span className="absolute right-full mr-4 bg-card text-foreground px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border/50">
+        <span className="absolute right-full mr-4 bg-white text-black px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-200 shadow-md">
           Book Now
         </span>
       </motion.a>
@@ -20,10 +20,10 @@ export default function FloatingActions() {
         href="tel:+919876543210"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center shadow-[0_0_20px_rgba(0,212,255,0.5)] hover:bg-secondary/90 transition-colors group relative"
+        className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center shadow-lg hover:bg-gray-900 transition-colors group relative"
       >
         <PhoneCall className="w-6 h-6" />
-        <span className="absolute right-full mr-4 bg-card text-foreground px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border/50">
+        <span className="absolute right-full mr-4 bg-white text-black px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-200 shadow-md">
           Call Us
         </span>
       </motion.a>
@@ -34,10 +34,10 @@ export default function FloatingActions() {
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:bg-emerald-600 transition-colors group relative"
+        className="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:bg-emerald-600 transition-colors group relative"
       >
         <MessageCircle className="w-6 h-6" />
-        <span className="absolute right-full mr-4 bg-card text-foreground px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border/50">
+        <span className="absolute right-full mr-4 bg-white text-black px-3 py-1.5 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-200 shadow-md">
           WhatsApp
         </span>
       </motion.a>

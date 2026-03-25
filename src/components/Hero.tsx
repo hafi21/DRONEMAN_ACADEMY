@@ -3,14 +3,14 @@ import { ArrowRight, Play, Phone } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32 lg:pb-40">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32 lg:pb-40 text-white">
       {/* Background Video/Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background z-10" />
+      <div className="absolute inset-0 z-0 bg-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-background z-10" />
         <img
           src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2000&auto=format&fit=crop"
           alt="Cinematic Drone View"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-60"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -32,7 +32,7 @@ export default function Hero() {
         <img
           src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=800&auto=format&fit=crop"
           alt="Drone"
-          className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto drop-shadow-[0_0_30px_rgba(0,212,255,0.6)] rounded-full mix-blend-screen"
+          className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto drop-shadow-[0_0_30px_rgba(229,9,20,0.6)] rounded-full mix-blend-screen"
           style={{ filter: 'contrast(1.2) brightness(1.5)' }}
           referrerPolicy="no-referrer"
         />
@@ -46,17 +46,17 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mb-20 md:mb-32"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8 border-primary/30">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-            <span className="text-sm font-medium tracking-wide text-foreground/80 uppercase">India's Premier Drone Academy</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md mb-8 border border-white/20">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm font-medium tracking-wide text-white/90 uppercase">Droneman Academy</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-white">
             Capturing perspectives that <br className="hidden md:block" />
-            <span className="text-gradient">elevate every story</span>
+            <span className="text-primary">elevate every story</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted mb-10 max-w-2xl mx-auto font-light">
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
             Professional drone services, certified pilot training, and hands-on workshops for the future of aerial tech.
           </p>
           
@@ -69,13 +69,13 @@ export default function Hero() {
             </a>
             <a
               href="#courses"
-              className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel text-white font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-all hover-glow-secondary"
+              className="w-full sm:w-auto px-8 py-4 rounded-full border-2 border-white text-white font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all"
             >
               Learn Drone Courses <Play className="w-5 h-5" />
             </a>
             <a
               href="#contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full border border-border text-foreground font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/5 transition-all"
+              className="w-full sm:w-auto px-8 py-4 rounded-full text-white font-semibold text-lg flex items-center justify-center gap-2 hover:text-primary transition-all"
             >
               Contact Us <Phone className="w-5 h-5" />
             </a>
@@ -89,8 +89,8 @@ export default function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 rounded-full border-2 border-muted/50 flex justify-center p-1">
-          <div className="w-1 h-2 bg-secondary rounded-full" />
+        <div className="w-6 h-10 rounded-full border-2 border-white/50 flex justify-center p-1">
+          <div className="w-1 h-2 bg-primary rounded-full" />
         </div>
       </motion.div>
     </section>

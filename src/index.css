@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0B0F19;
-  --color-foreground: #EAEAEA;
-  --color-primary: #7B61FF;
+  --color-background: #FFFFFF;
+  --color-foreground: #0F0F0F;
+  --color-primary: #E50914;
   --color-primary-foreground: #FFFFFF;
-  --color-secondary: #00D4FF;
-  --color-secondary-foreground: #0B0F19;
-  --color-card: #131A2A;
-  --color-card-foreground: #EAEAEA;
-  --color-border: #2A3143;
-  --color-muted: #8E9BB0;
+  --color-secondary: #B20710;
+  --color-secondary-foreground: #FFFFFF;
+  --color-card: #F5F5F5;
+  --color-card-foreground: #0F0F0F;
+  --color-border: #E5E5E5;
+  --color-muted: #666666;
   
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
@@ -31,25 +31,26 @@
 }
 
 .glass-panel {
-  background: rgba(19, 26, 42, 0.6);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(123, 97, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #7B61FF, #00D4FF);
+  background: linear-gradient(90deg, #E50914, #B20710);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(123, 97, 255, 0.5);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
 }
 
 .hover-glow-secondary:hover {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 20px rgba(178, 7, 16, 0.4);
 }
 
 /* Smooth scrolling */

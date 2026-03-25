@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-panel py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 text-black' : 'bg-transparent py-5 text-white'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -35,7 +35,7 @@ export default function Navbar() {
             whileHover={{ rotate: 15 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <Navigation className="w-8 h-8 text-secondary" />
+            <Navigation className="w-8 h-8 text-primary" />
           </motion.div>
           <span className="text-2xl font-bold tracking-tight">
             Drone<span className="text-primary">man</span>
@@ -49,7 +49,9 @@ export default function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-secondary transition-colors whitespace-nowrap"
+                  className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                    isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   {link.name}
                 </a>
@@ -66,7 +68,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-foreground p-2"
+          className="lg:hidden p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -79,14 +81,14 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="lg:hidden absolute top-full left-0 w-full glass-panel border-t border-border/50 py-4 px-4 flex flex-col gap-4 shadow-2xl"
+          className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 py-4 px-4 flex flex-col gap-4 shadow-2xl text-black"
         >
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="block text-lg font-medium text-foreground/90 hover:text-secondary"
+                  className="block text-lg font-medium text-gray-800 hover:text-primary"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}

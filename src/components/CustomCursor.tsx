@@ -46,7 +46,7 @@ export default function CustomCursor() {
     <>
       {/* Inner Dot */}
       <motion.div
-        className="fixed top-0 left-0 z-[100] w-2 h-2 bg-primary rounded-full pointer-events-none hidden md:block shadow-[0_0_10px_rgba(123,97,255,0.8)]"
+        className="fixed top-0 left-0 z-[100] w-2 h-2 bg-primary rounded-full pointer-events-none hidden md:block shadow-[0_0_10px_rgba(229,9,20,0.8)]"
         style={{
           x: mouseX,
           y: mouseY,
@@ -66,15 +66,15 @@ export default function CustomCursor() {
         }}
         animate={{
           scale: isHovering ? 1.8 : 1,
-          backgroundColor: isHovering ? 'rgba(0, 212, 255, 0.1)' : 'transparent',
-          borderColor: isHovering ? 'rgba(0, 212, 255, 0.8)' : 'rgba(123, 97, 255, 0.4)',
+          backgroundColor: isHovering ? 'rgba(229, 9, 20, 0.1)' : 'transparent',
+          borderColor: isHovering ? 'rgba(229, 9, 20, 0.8)' : 'rgba(229, 9, 20, 0.4)',
         }}
         transition={{ duration: 0.2 }}
       />
       
       {/* Subtle Glow Aura */}
       <motion.div
-        className="fixed top-0 left-0 z-[98] w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none hidden md:block"
+        className="fixed top-0 left-0 z-[98] w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none hidden md:block"
         style={{
           x: cursorX,
           y: cursorY,

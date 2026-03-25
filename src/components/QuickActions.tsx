@@ -8,8 +8,8 @@ export default function QuickActions() {
       title: 'I want Drone Shooting',
       description: 'Professional aerial photography, videography, and industrial mapping services.',
       icon: Camera,
-      color: 'from-primary/20 to-primary/5',
-      borderColor: 'border-primary/30',
+      color: 'from-white to-gray-50',
+      borderColor: 'border-gray-200',
       glow: 'hover-glow',
       href: '#services'
     },
@@ -18,9 +18,9 @@ export default function QuickActions() {
       title: 'I want to Learn Drones',
       description: 'DGCA certified pilot training, FPV racing, and commercial drone operations.',
       icon: GraduationCap,
-      color: 'from-secondary/20 to-secondary/5',
-      borderColor: 'border-secondary/30',
-      glow: 'hover-glow-secondary',
+      color: 'from-white to-gray-50',
+      borderColor: 'border-gray-200',
+      glow: 'hover-glow',
       href: '#courses'
     },
     {
@@ -28,9 +28,9 @@ export default function QuickActions() {
       title: 'I want Workshops',
       description: 'Hands-on drone building, coding, and STEM workshops for kids and engineers.',
       icon: Wrench,
-      color: 'from-purple-500/20 to-purple-500/5',
-      borderColor: 'border-purple-500/30',
-      glow: 'hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]',
+      color: 'from-white to-gray-50',
+      borderColor: 'border-gray-200',
+      glow: 'hover-glow',
       href: '#workshops'
     }
   ];
@@ -47,21 +47,21 @@ export default function QuickActions() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -10, scale: 1.02 }}
-            className={`glass-panel rounded-2xl p-6 md:p-8 flex flex-col items-start gap-4 border bg-gradient-to-br ${action.color} ${action.borderColor} ${action.glow} transition-all duration-300 group cursor-pointer relative overflow-hidden`}
+            className={`bg-white rounded-2xl p-6 md:p-8 flex flex-col items-start gap-4 border bg-gradient-to-br ${action.color} ${action.borderColor} ${action.glow} shadow-lg transition-all duration-300 group cursor-pointer relative overflow-hidden`}
           >
             {/* Background Drone Silhouette */}
-            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+            <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110 text-primary">
               <action.icon className="w-32 md:w-48 h-32 md:h-48" />
             </div>
 
-            <div className={`p-3 md:p-4 rounded-xl bg-background/50 border ${action.borderColor} backdrop-blur-md`}>
-              <action.icon className="w-6 md:w-8 h-6 md:h-8 text-foreground" />
+            <div className={`p-3 md:p-4 rounded-xl bg-gray-50 border ${action.borderColor}`}>
+              <action.icon className="w-6 md:w-8 h-6 md:h-8 text-primary" />
             </div>
             
-            <h3 className="text-xl md:text-2xl font-bold mt-2">{action.title}</h3>
-            <p className="text-sm md:text-base text-muted leading-relaxed">{action.description}</p>
+            <h3 className="text-xl md:text-2xl font-bold mt-2 text-black">{action.title}</h3>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">{action.description}</p>
             
-            <div className="mt-auto pt-4 md:pt-6 flex items-center gap-2 font-bold text-xs md:text-sm uppercase tracking-widest group-hover:text-secondary transition-colors">
+            <div className="mt-auto pt-4 md:pt-6 flex items-center gap-2 font-bold text-xs md:text-sm uppercase tracking-widest text-gray-400 group-hover:text-primary transition-colors">
               Explore <span className="group-hover:translate-x-2 transition-transform">→</span>
             </div>
           </motion.a>

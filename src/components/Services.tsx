@@ -38,7 +38,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-background">
+    <section id="services" className="py-24 relative overflow-hidden bg-white">
       {/* 3D Rotating Drone Simulation */}
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-5 pointer-events-none z-0"
@@ -48,8 +48,8 @@ export default function Services() {
         <img
           src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=800&auto=format&fit=crop"
           alt="Rotating Drone"
-          className="w-full h-full object-contain mix-blend-screen"
-          style={{ filter: 'contrast(2) brightness(2)' }}
+          className="w-full h-full object-contain mix-blend-multiply"
+          style={{ filter: 'contrast(1.2) grayscale(1)' }}
           referrerPolicy="no-referrer"
         />
       </motion.div>
@@ -69,16 +69,16 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold mb-6"
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-black"
           >
-            Professional <span className="text-gradient">Drone Services</span>
+            Professional <span className="text-primary">Drone Services</span>
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-muted max-w-2xl mx-auto"
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
             From cinematic storytelling to industrial precision, we deliver unparalleled aerial solutions tailored to your needs.
           </motion.p>
@@ -92,31 +92,31 @@ export default function Services() {
               whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1, type: "spring", stiffness: 100 }}
-              className="group relative rounded-3xl overflow-hidden glass-panel border-border/50 hover:border-primary/50 transition-colors"
+              className="group relative rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
               style={{ perspective: 1000 }}
             >
               <div className="absolute inset-0 z-0">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700"
+                  className="w-full h-full object-cover opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-white/20" />
               </div>
 
               <div className="relative z-10 p-8 h-full flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 border border-primary/30 group-hover:bg-primary/40 transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mb-6 border border-red-100 group-hover:bg-red-100 transition-colors">
                   <service.icon className="w-8 h-8 text-primary" />
                 </div>
                 
-                <h4 className="text-2xl font-bold mb-3">{service.title}</h4>
-                <p className="text-muted mb-6 leading-relaxed">{service.description}</p>
+                <h4 className="text-2xl font-bold mb-3 text-black">{service.title}</h4>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 
                 <ul className="mb-8 space-y-2">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                    <li key={i} className="flex items-center gap-2 text-sm text-gray-700 font-medium">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                       {feature}
                     </li>
                   ))}
@@ -125,7 +125,7 @@ export default function Services() {
                 <div className="mt-auto">
                   <a
                     href="#booking"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-primary text-foreground font-semibold transition-all hover-glow group/btn border border-border/50 hover:border-transparent"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gray-50 hover:bg-primary text-black hover:text-white font-semibold transition-all hover-glow group/btn border border-gray-200 hover:border-transparent"
                   >
                     Book Service <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
